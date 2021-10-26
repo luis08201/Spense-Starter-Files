@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+$colores: (
+    negro: #000000,
+    gris:#F0EEEB,
+    blanco:#fff,
+    rosado:#F48FB1,
+
+);
+
+.contenedor{
+    max-width:1142px;
+    margin:0 auto;
+    width:95%;
+}
+
+@mixin cta{
+    text-transform: capitalize;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 12px 20px;
+    background-color: map-get($colores, negro);
+    color: map-get($colores, blanco);
+    border-radius: 8px;
+    transition: background-color 0.5s 0s ease, color 0.5s 0s ease;
+
+    &:hover {
+      background-color: map-get($colores, rosado);
+      color: map-get($colores, negro);
+    }
+}
